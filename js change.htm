@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    input {
+      background-color: rgb(231, 252, 253);
+      width: 60px;
+      height: 20px;
+    }
+    button {
+      background-color: rgb(203, 225, 243);
+    }
+  </style>
+
+  <body>
+    <input type="text" id="black" />
+    <button onclick="change()"><==></button>
+    <input type="text" id="white" />
+
+    <script>
+      let black = document.getElementById("black");
+      let white = document.getElementById("white");
+
+      let c = "";
+
+      function change() {
+        c = white.value;
+        white.value = black.value;
+        black.value = c;
+      }
+    </script>
+  </body>
+</html>
